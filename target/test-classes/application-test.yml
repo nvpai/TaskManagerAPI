@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: task-management-api-test
+  
+  # H2 Database Configuration for Testing
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  # JPA Configuration for Testing
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false  # Set to true for debugging SQL queries
+    properties:
+      hibernate:
+        format_sql: true
+
+# Logging Configuration for Testing
+logging:
+  level:
+    com.example.taskmanagement: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: INFO

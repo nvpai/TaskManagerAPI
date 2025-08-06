@@ -1,0 +1,5 @@
+/workspace/src/test/java/com/example/taskmanagement/TaskManagementIntegrationTest.java
+/workspace/src/test/java/com/example/taskmanagement/service/TaskServiceTest.java
+/workspace/src/test/java/com/example/taskmanagement/model/TaskTest.java
+/workspace/src/test/java/com/example/taskmanagement/controller/TaskControllerTest.java
+/workspace/src/test/java/com/example/taskmanagement/repository/TaskRepositoryTest.java

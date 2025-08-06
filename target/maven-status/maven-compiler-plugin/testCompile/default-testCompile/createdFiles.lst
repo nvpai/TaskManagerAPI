@@ -1,0 +1,5 @@
+com/example/taskmanagement/TaskManagementIntegrationTest.class
+com/example/taskmanagement/service/TaskServiceTest.class
+com/example/taskmanagement/controller/TaskControllerTest.class
+com/example/taskmanagement/model/TaskTest.class
+com/example/taskmanagement/repository/TaskRepositoryTest.class
