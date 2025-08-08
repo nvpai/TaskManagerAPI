@@ -1,23 +1,35 @@
-# TaskManagerAPI
+# Spring Boot TDD Demo (Beginner)
 
-A simple RESTful API for task management built with Java and Spring Boot. Supports basic operations to create, view, update, and delete tasks. Designed to practice clean backend architecture and test-driven development (TDD).
+A tiny Spring Boot project to learn TDD. It implements a trivial calculator: an `add(a,b)` service and a REST endpoint `/api/calc/add?a=1&b=2`.
 
+## Requirements
+- Java 21 (already installed in this environment)
+- No Maven/Gradle needed: the Maven Wrapper `./mvnw` is included
 
+## Project layout
+- `src/main/java/com/example/demo/CalculatorService.java`: business logic
+- `src/main/java/com/example/demo/CalculatorController.java`: REST endpoint
+- `src/test/java/com/example/demo/CalculatorServiceTest.java`: unit test (service)
+- `src/test/java/com/example/demo/CalculatorControllerTest.java`: web layer test (MockMvc)
 
-🧰 Tech Stack
-Java 17+
+## Run tests
+```
+./mvnw test
+```
 
-Spring Boot 3.x
+## Run the application
+```
+./mvnw spring-boot:run
+```
+Then open `http://localhost:8080/api/calc/add?a=5&b=7` (should return `12`).
 
-Spring Web
+## TDD walkthrough (red → green → refactor)
+1. RED: Write a failing test for `CalculatorService.add`.
+2. GREEN: Implement the simplest `add` to pass the test.
+3. RED: Write a MockMvc test for `/api/calc/add` expecting `12`.
+4. GREEN: Implement `CalculatorController` to satisfy the test.
+5. REFACTOR: Keep code clean, small methods, clear names.
 
-Spring Data JPA
-
-H2 Database (in-memory)
-
-JUnit 5, Mockito (for unit testing)
-
-Maven (build tool)
-
-Postman (for testing endpoints)
+## Notes
+- Tests use JUnit 5 and MockMvc. No database, no complexity—just enough to learn TDD with Spring.
 
